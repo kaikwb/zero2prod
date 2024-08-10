@@ -7,6 +7,7 @@ use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::{EnvFilter, Registry};
 
 pub mod configuration;
+pub mod domain;
 pub mod routes;
 pub mod startup;
 
