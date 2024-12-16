@@ -1,0 +1,7 @@
+[target.x86_64-unknown-linux-gnu]
+
+# Uses lld as the linker
+rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=lld"]
+
+# Uses mold as the linker
+# rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=mold"]
