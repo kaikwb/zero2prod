@@ -24,6 +24,3 @@ jobs:
 
       - name: Scan for security vulnerabilities
         run: make cargo-deny
-
-      - name: Audit dependencies
-        run: make cargo-audit

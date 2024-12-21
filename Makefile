@@ -13,8 +13,11 @@ code-linter:
 code-fmt:
 	cargo fmt -- --check
 
-cargo-audit:
-	cargo audit
-
 cargo-deny:
 	cargo deny check advisories
+
+migrate-db:
+	SKIP_DOCKER=true ./scripts/init_db.sh
+
+check-queries:
+	cargo sqlx prepare --workspace --check -- --all-targets
