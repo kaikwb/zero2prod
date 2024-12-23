@@ -19,5 +19,8 @@ cargo-deny:
 migrate-db:
 	SKIP_DOCKER=true ./scripts/init_db.sh
 
+prepare-queries:
+	cargo sqlx prepare --workspace -- --all-targets --all-features
+
 check-queries:
 	cargo sqlx prepare --workspace --check -- --all-targets
