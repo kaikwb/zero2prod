@@ -24,3 +24,6 @@ prepare-queries:
 
 check-queries:
 	cargo sqlx prepare --workspace --check -- --all-targets
+
+check-unused-deps:
+	cargo +nightly udeps
